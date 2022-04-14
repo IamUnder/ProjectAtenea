@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/IamUnder/ProjectAtenea/issues"
   },
-  "homepage": "https://github.com/IamUnder/ProjectAtenea#readme"
+  "homepage": "https://github.com/IamUnder/ProjectAtenea#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0"
+  }
 }
