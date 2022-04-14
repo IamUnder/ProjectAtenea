@@ -1,0 +1,19 @@
+{
+  "name": "proyect-atenea",
+  "version": "1.0.0",
+  "description": "Segunda version del bot de discord con las funcionalidades y la distribucion de eventos y comandos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamUnder/ProjectAtenea.git"
+  },
+  "author": "IamUnder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamUnder/ProjectAtenea/issues"
+  },
+  "homepage": "https://github.com/IamUnder/ProjectAtenea#readme"
+}
