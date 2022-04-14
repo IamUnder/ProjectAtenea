@@ -1,3 +1,4 @@
+const fs = require('node:fs')
 const { SlashCommandBuilder } = require('@discordjs/builders')
 const { REST } = require('@discordjs/rest')
 const { Routes } = require('discord-api-types/v9')
@@ -5,11 +6,13 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
-const commands = [
-    new SlashCommandBuilder().setName('ping').setDescription('Pong!'),
-    new SlashCommandBuilder().setName('server').setDescription('server!'),
-    new SlashCommandBuilder().setName('user').setDescription('user!')
-].map(command => command.toJSON())
+const commands = []
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
+
+for (const file of commandFiles) {
+    const command = require(`./commands/${file}`)
+    commands.push(command.data.toJSON())
+}
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN)
 
