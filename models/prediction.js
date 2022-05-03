@@ -3,6 +3,10 @@ const mongoose = require('mongoose')
 
 // Definimos el modelo
 const PredictSchema = new mongoose.Schema({
+    id: {
+        type: String,
+        required: true
+    },
     user_id: {
         type: String,
         required: true
@@ -17,7 +21,7 @@ const PredictSchema = new mongoose.Schema({
     },
     options: {
         type: Array,
-        required: true
+        default: []
     },
     bet: {
         type: Array,
@@ -35,4 +39,4 @@ const PredictSchema = new mongoose.Schema({
     versionKey: false
 })
 
-module.exports = mongoose.model('User', PredictSchema)
+module.exports = mongoose.model('Prediction', PredictSchema)
